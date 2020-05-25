@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue1</title>
+</head>
+<body>
+    <div id = "app" >
+        <h3> O {{ nome }} eh muito gostoso e so tem {{ idade }}aninhos</h3>
+
+        <p v-if="idade > 17">Ja pode comer, maior de idade</p>
+        <p v-if="idade <= 18">Pode comer,mas eh crime,menor de idade</p>
+
+        <ul v-for="produto in produtos">
+            <li>{{ produto }}</li>
+        </ul>
+        <p>contador:{{ contador }}</p>
+        <button @click="contador++">Adicionar</button>
+        <button @click="contador--">Remover</button>
+
+            
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+
+        const app = new Vue({
+            el: "#app",
+            data:{
+                nome:"Leonardo",
+                idade: 17,
+                produtos:["TV" , "Celular" , "Carro"],
+                contador: 0
+            }
+
+
+
+
+        })
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
